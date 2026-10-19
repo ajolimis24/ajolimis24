@@ -56,7 +56,7 @@ export default function Hero({ theme = 'light' }) {
           >
             <h1 className={`text-[16vw] sm:text-[17vw] md:text-[18vw] lg:text-[19vw] font-black tracking-tighter leading-none uppercase font-display text-center select-none ${
               isLight 
-                ? 'text-slate-100 drop-shadow-[0_4px_12px_rgba(0,0,0,0.03)]' 
+                ? 'text-black drop-shadow-[0_20px_40px_rgba(0,0,0,0.35)]' 
                 : 'text-metallic opacity-85 drop-shadow-[0_20px_35px_rgba(0,0,0,0.8)]'
             }`}>
               PORTFOLIO
@@ -89,30 +89,30 @@ export default function Hero({ theme = 'light' }) {
             initial={{ opacity: 0, x: -40 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.9, delay: 0.4 }}
-            className="absolute left-2 sm:left-6 md:left-8 bottom-4 sm:bottom-8 z-20 max-w-[280px] sm:max-w-xs text-left"
+            className="absolute left-2 sm:left-6 md:left-8 bottom-4 sm:bottom-8 z-20 max-w-[280px] sm:max-w-xs text-left p-3.5 sm:p-4 rounded-2xl bg-white/80 dark:bg-[#070b14]/80 backdrop-blur-md border border-slate-200/80 dark:border-white/10 shadow-sm"
           >
             <div className="flex items-center gap-2 mb-2">
               <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-              <span className={`text-[11px] sm:text-xs font-mono uppercase tracking-wider font-semibold ${
-                isLight ? 'text-slate-600' : 'text-cyan-400'
+              <span className={`text-[11px] sm:text-xs font-mono uppercase tracking-wider font-bold ${
+                isLight ? 'text-slate-700' : 'text-cyan-400'
               }`}>
                 Available for Roles
               </span>
             </div>
             <div className="font-display">
               <span className={`text-xl sm:text-3xl md:text-4xl font-extrabold tracking-tight block ${
-                isLight ? 'text-slate-900' : 'text-white'
+                isLight ? 'text-slate-950' : 'text-white'
               }`}>
                 Software
               </span>
               <span className={`text-xl sm:text-3xl md:text-4xl font-light italic font-serif tracking-wide block ${
-                isLight ? 'text-slate-600' : 'text-slate-300'
+                isLight ? 'text-slate-700' : 'text-slate-300'
               }`}>
                 Developer
               </span>
             </div>
             <p className={`mt-2 text-xs sm:text-sm font-medium line-clamp-2 sm:line-clamp-none hidden sm:block ${
-              isLight ? 'text-slate-500' : 'text-slate-400'
+              isLight ? 'text-slate-600' : 'text-slate-400'
             }`}>
               {portfolioData.personal.name} • CSE @ KIT
             </p>
@@ -123,7 +123,7 @@ export default function Hero({ theme = 'light' }) {
             initial={{ opacity: 0, x: 40 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.9, delay: 0.5 }}
-            className="absolute right-2 sm:right-6 md:right-8 bottom-4 sm:bottom-8 z-20 flex items-center gap-2 sm:gap-3"
+            className="absolute right-2 sm:right-6 md:right-8 bottom-4 sm:bottom-8 z-20 flex items-center gap-2 sm:gap-3 p-2 rounded-full bg-white/80 dark:bg-[#070b14]/80 backdrop-blur-md border border-slate-200/80 dark:border-white/10 shadow-sm"
           >
             <a
               href="#projects"
