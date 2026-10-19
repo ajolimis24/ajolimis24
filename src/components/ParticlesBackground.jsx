@@ -51,7 +51,7 @@ export default function ParticlesBackground({ theme = 'light' }) {
         ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
         ctx.fillStyle = isLight
           ? `rgba(148, 163, 184, ${p.alpha * 0.8})`
-          : `rgba(56, 189, 248, ${p.alpha})`;
+          : `rgba(109, 207, 246, ${p.alpha})`;
         ctx.fill();
       });
 

@@ -43,7 +43,7 @@ export default function ProjectModal({ project, isOpen, onClose, theme = 'light'
           className={`relative w-full max-w-3xl max-h-[90vh] overflow-y-auto rounded-3xl p-6 sm:p-8 z-10 shadow-2xl ${
             isLight
               ? 'bg-white text-slate-900 border border-slate-200'
-              : 'bg-[#0a0e1a] text-slate-200 border border-white/15'
+              : 'bg-[#212126] text-white border border-[#383940]'
           }`}
         >
           {/* Close button */}
@@ -52,7 +52,7 @@ export default function ProjectModal({ project, isOpen, onClose, theme = 'light'
             className={`absolute top-5 right-5 p-2 rounded-full transition-colors ${
               isLight
                 ? 'bg-slate-100 hover:bg-slate-200 text-slate-600 hover:text-slate-950'
-                : 'bg-white/5 hover:bg-white/10 text-slate-400 hover:text-white border border-white/10'
+                : 'bg-[#323337] hover:bg-[#3a3b42] text-slate-300 hover:text-white border border-[#383940]'
             }`}
             aria-label="Close dialog"
           >
@@ -64,7 +64,7 @@ export default function ProjectModal({ project, isOpen, onClose, theme = 'light'
             <span className={`inline-block px-3 py-1 rounded-full text-[11px] font-mono uppercase tracking-wider font-semibold mb-2 ${
               isLight
                 ? 'bg-slate-100 text-slate-800 border border-slate-200'
-                : 'bg-cyan-500/10 text-cyan-400 border border-cyan-500/20'
+                : 'bg-[#323337] text-[#6dcff6] border border-[#383940]'
             }`}>
               {project.category}
             </span>
@@ -72,13 +72,13 @@ export default function ProjectModal({ project, isOpen, onClose, theme = 'light'
               {project.title}
             </h3>
             <p className={`text-xs sm:text-sm mt-1 ${isLight ? 'text-slate-600' : 'text-slate-400'}`}>
-              Role: <strong className={isLight ? 'text-slate-900' : 'text-cyan-300'}>{project.role}</strong> • {project.status}
+              Role: <strong className={isLight ? 'text-slate-900' : 'text-[#6dcff6]'}>{project.role}</strong> • {project.status}
             </p>
           </div>
 
           {/* Project Showcase Image */}
           <div className={`relative w-full rounded-2xl overflow-hidden border mb-6 ${
-            isLight ? 'border-slate-200' : 'border-white/10'
+            isLight ? 'border-slate-200' : 'border-[#383940]'
           }`}>
             <img
               src={project.image}
@@ -92,7 +92,7 @@ export default function ProjectModal({ project, isOpen, onClose, theme = 'light'
             <h4 className={`text-xs font-mono uppercase tracking-wider mb-2 flex items-center gap-2 font-bold ${
               isLight ? 'text-slate-500' : 'text-slate-400'
             }`}>
-              <Compass className={`w-4 h-4 ${isLight ? 'text-slate-900' : 'text-cyan-400'}`} />
+              <Compass className={`w-4 h-4 ${isLight ? 'text-slate-900' : 'text-[#6dcff6]'}`} />
               <span>Project Overview & Context</span>
             </h4>
             <p className={`text-sm leading-relaxed ${isLight ? 'text-slate-700' : 'text-slate-300'}`}>
@@ -105,7 +105,7 @@ export default function ProjectModal({ project, isOpen, onClose, theme = 'light'
             <h4 className={`text-xs font-mono uppercase tracking-wider mb-3 flex items-center gap-2 font-bold ${
               isLight ? 'text-slate-500' : 'text-slate-400'
             }`}>
-              <CheckCircle className={`w-4 h-4 ${isLight ? 'text-slate-900' : 'text-cyan-400'}`} />
+              <CheckCircle className={`w-4 h-4 ${isLight ? 'text-slate-900' : 'text-[#6dcff6]'}`} />
               <span>Key Features & Responsibilities (From Resume)</span>
             </h4>
             <div className="space-y-2.5">
@@ -115,11 +115,11 @@ export default function ProjectModal({ project, isOpen, onClose, theme = 'light'
                   className={`flex items-start gap-2.5 p-3 rounded-xl border ${
                     isLight
                       ? 'bg-slate-50 border-slate-200/80 text-slate-800'
-                      : 'bg-white/[0.03] border-white/5 text-slate-200'
+                      : 'bg-[#2a2b30] border-[#383940] text-slate-200'
                   }`}
                 >
                   <div className={`w-1.5 h-1.5 rounded-full mt-2 shrink-0 ${
-                    isLight ? 'bg-slate-900' : 'bg-cyan-400'
+                    isLight ? 'bg-slate-900' : 'bg-[#6dcff6]'
                   }`} />
                   <p className="text-xs sm:text-sm leading-relaxed">
                     {feature}
@@ -133,10 +133,10 @@ export default function ProjectModal({ project, isOpen, onClose, theme = 'light'
           <div className={`mb-6 p-4 rounded-2xl border ${
             isLight
               ? 'bg-slate-50 border-slate-200 text-slate-800'
-              : 'bg-cyan-500/5 border-cyan-500/20 text-slate-300'
+              : 'bg-[#2a2b30] border-[#383940] text-slate-300'
           }`}>
             <h4 className={`text-xs font-mono uppercase tracking-wider mb-1 flex items-center gap-2 font-bold ${
-              isLight ? 'text-slate-900' : 'text-cyan-400'
+              isLight ? 'text-slate-900' : 'text-[#6dcff6]'
             }`}>
               <Lightbulb className="w-4 h-4" />
               <span>Demonstrated Project Impact</span>
@@ -151,7 +151,7 @@ export default function ProjectModal({ project, isOpen, onClose, theme = 'light'
             <h4 className={`text-xs font-mono uppercase tracking-wider mb-2 flex items-center gap-2 font-bold ${
               isLight ? 'text-slate-500' : 'text-slate-400'
             }`}>
-              <Tag className={`w-4 h-4 ${isLight ? 'text-slate-900' : 'text-cyan-400'}`} />
+              <Tag className={`w-4 h-4 ${isLight ? 'text-slate-900' : 'text-[#6dcff6]'}`} />
               <span>Technologies & Tools</span>
             </h4>
             <div className="flex flex-wrap gap-2">
@@ -161,7 +161,7 @@ export default function ProjectModal({ project, isOpen, onClose, theme = 'light'
                   className={`px-3 py-1 text-xs font-mono font-medium rounded-lg ${
                     isLight
                       ? 'bg-slate-100 text-slate-800 border border-slate-200'
-                      : 'bg-white/5 border border-white/10 text-slate-300'
+                      : 'bg-[#2a2b30] border border-[#383940] text-slate-200'
                   }`}
                 >
                   {tech}
@@ -172,7 +172,7 @@ export default function ProjectModal({ project, isOpen, onClose, theme = 'light'
 
           {/* Footer Actions */}
           <div className={`flex items-center justify-end gap-3 pt-4 border-t ${
-            isLight ? 'border-slate-200' : 'border-white/10'
+            isLight ? 'border-slate-200' : 'border-[#383940]'
           }`}>
             <a
               href={project.github}
@@ -181,7 +181,7 @@ export default function ProjectModal({ project, isOpen, onClose, theme = 'light'
               className={`inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider transition-all shadow-xs ${
                 isLight
                   ? 'bg-slate-900 text-white hover:bg-slate-800'
-                  : 'bg-slate-800 hover:bg-slate-700 text-white border border-white/15'
+                  : 'bg-[#6dcff6] hover:bg-[#5bb8e3] text-[#212126] font-bold shadow-[0_0_15px_rgba(109,207,246,0.3)]'
               }`}
             >
               <GithubIcon className="w-4 h-4" />
@@ -192,7 +192,7 @@ export default function ProjectModal({ project, isOpen, onClose, theme = 'light'
               className={`px-5 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider transition-all ${
                 isLight
                   ? 'bg-slate-100 hover:bg-slate-200 text-slate-700'
-                  : 'bg-white/5 hover:bg-white/10 text-slate-300 hover:text-white'
+                  : 'bg-[#323337] hover:bg-[#3a3b42] text-slate-200 hover:text-white border border-[#383940]'
               }`}
             >
               Close

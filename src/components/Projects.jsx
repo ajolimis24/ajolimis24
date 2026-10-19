@@ -12,7 +12,7 @@ export default function Projects({ theme = 'light' }) {
   return (
     <section 
       id="projects" 
-      className="relative py-24 sm:py-32 bg-slate-50/60 dark:bg-[#060810] border-y border-slate-200/80 dark:border-white/5 text-slate-900 dark:text-slate-100 overflow-hidden transition-colors duration-300"
+      className="relative py-24 sm:py-32 bg-slate-50/60 dark:bg-[#1d1d22] border-y border-slate-200/80 dark:border-[#323337] text-slate-900 dark:text-slate-100 overflow-hidden transition-colors duration-300"
     >
       <div className="max-w-7xl mx-auto px-6 sm:px-8 relative z-10">
         
@@ -24,7 +24,7 @@ export default function Projects({ theme = 'light' }) {
           transition={{ duration: 0.7 }}
           className="text-center max-w-3xl mx-auto mb-16 sm:mb-20"
         >
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-100 dark:bg-cyan-500/10 border border-slate-200 dark:border-cyan-500/20 text-slate-800 dark:text-cyan-400 text-xs font-mono uppercase tracking-widest mb-4 font-semibold">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-100 dark:bg-[#323337] border border-slate-200 dark:border-[#383940] text-slate-800 dark:text-[#6dcff6] text-xs font-mono uppercase tracking-widest mb-4 font-semibold">
             <FolderGit2 className="w-3.5 h-3.5" />
             <span>Featured Portfolio</span>
           </div>
@@ -49,11 +49,11 @@ export default function Projects({ theme = 'light' }) {
               className={`rounded-2xl overflow-hidden flex flex-col justify-between transition-all duration-300 ${
                 isLight
                   ? 'bg-white border border-slate-200/90 shadow-sm hover:shadow-2xl hover:border-slate-300'
-                  : 'glass-card border border-white/10 hover:border-cyan-500/40 shadow-xl hover:shadow-[0_20px_45px_rgba(14,165,233,0.2)]'
+                  : 'bg-[#2a2b30] border border-[#383940] hover:border-[#6dcff6] shadow-xl hover:shadow-[0_20px_45px_rgba(109,207,246,0.18)]'
               }`}
             >
               {/* Image Preview Container */}
-              <div className="relative w-full h-56 sm:h-64 overflow-hidden bg-slate-100 dark:bg-slate-900 border-b border-slate-200/80 dark:border-white/10">
+              <div className="relative w-full h-56 sm:h-64 overflow-hidden bg-slate-100 dark:bg-[#212126] border-b border-slate-200/80 dark:border-[#383940]">
                 <img
                   src={project.image}
                   alt={project.title}
@@ -65,7 +65,7 @@ export default function Projects({ theme = 'light' }) {
                   <span className={`px-3 py-1 rounded-full text-[11px] font-mono uppercase tracking-wider font-bold shadow-xs ${
                     isLight 
                       ? 'bg-white text-slate-900 border border-slate-200' 
-                      : 'bg-[#070b14]/80 backdrop-blur-md text-cyan-300 border border-cyan-500/30'
+                      : 'bg-[#212126]/90 backdrop-blur-md text-[#6dcff6] border border-[#6dcff6]/30'
                   }`}>
                     {project.status}
                   </span>
@@ -75,7 +75,7 @@ export default function Projects({ theme = 'light' }) {
                   <span className={`px-3 py-1 rounded-full text-[11px] font-medium tracking-wider shadow-xs ${
                     isLight
                       ? 'bg-slate-900 text-white'
-                      : 'bg-black/60 backdrop-blur-md text-slate-300 border border-white/10'
+                      : 'bg-[#323337]/90 backdrop-blur-md text-slate-200 border border-[#3a3b42]'
                   }`}>
                     {project.role}
                   </span>
@@ -85,7 +85,7 @@ export default function Projects({ theme = 'light' }) {
               {/* Content Body */}
               <div className="p-6 sm:p-8 flex-1 flex flex-col justify-between">
                 <div>
-                  <span className="text-[11px] font-mono uppercase tracking-wider font-bold text-slate-500 dark:text-cyan-400 block mb-1">
+                  <span className="text-[11px] font-mono uppercase tracking-wider font-bold text-slate-500 dark:text-[#6dcff6] block mb-1">
                     {project.category}
                   </span>
 
@@ -102,7 +102,7 @@ export default function Projects({ theme = 'light' }) {
                     {project.keyFeatures.slice(0, 3).map((feat, fIdx) => (
                       <div key={fIdx} className="flex items-start gap-2.5 text-xs text-slate-700 dark:text-slate-300">
                         <CheckCircle2 className={`w-3.5 h-3.5 shrink-0 mt-0.5 ${
-                          isLight ? 'text-slate-900' : 'text-cyan-400'
+                          isLight ? 'text-slate-900' : 'text-[#6dcff6]'
                         }`} />
                         <span className="line-clamp-1">{feat}</span>
                       </div>
@@ -113,9 +113,9 @@ export default function Projects({ theme = 'light' }) {
                   <div className={`p-3.5 rounded-xl mb-6 ${
                     isLight
                       ? 'bg-slate-50 border border-slate-200/80 text-slate-800'
-                      : 'bg-white/[0.03] border border-white/5 text-slate-300'
+                      : 'bg-[#212126] border border-[#383940] text-slate-300'
                   }`}>
-                    <p className="text-[10px] font-mono uppercase tracking-wider font-bold text-slate-500 dark:text-cyan-400 mb-0.5">
+                    <p className="text-[10px] font-mono uppercase tracking-wider font-bold text-slate-500 dark:text-[#6dcff6] mb-0.5">
                       Demonstrated Impact
                     </p>
                     <p className="text-xs leading-relaxed">{project.impact}</p>
@@ -129,7 +129,7 @@ export default function Projects({ theme = 'light' }) {
                         className={`px-2.5 py-1 text-[11px] font-mono font-medium rounded-md ${
                           isLight
                             ? 'bg-slate-100 text-slate-800 border border-slate-200'
-                            : 'bg-white/5 text-slate-300 border border-white/5'
+                            : 'bg-[#212126] text-slate-300 border border-[#383940]'
                         }`}
                       >
                         {tech}
@@ -139,7 +139,7 @@ export default function Projects({ theme = 'light' }) {
                 </div>
 
                 {/* Card Action Buttons */}
-                <div className="pt-5 border-t border-slate-200 dark:border-white/10 flex items-center justify-between gap-4">
+                <div className="pt-5 border-t border-slate-200 dark:border-[#383940] flex items-center justify-between gap-4">
                   <motion.button
                     whileHover={{ scale: 1.04, x: 2 }}
                     whileTap={{ scale: 0.96 }}
@@ -147,7 +147,7 @@ export default function Projects({ theme = 'light' }) {
                     className={`inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider transition-colors duration-200 group/btn shadow-xs ${
                       isLight
                         ? 'bg-slate-900 hover:bg-slate-800 text-white'
-                        : 'text-cyan-400 hover:text-cyan-300'
+                        : 'bg-[#323337] hover:bg-[#3a3b42] text-[#6dcff6] border border-[#383940] hover:border-[#6dcff6]'
                     }`}
                   >
                     <span>View Architecture & Details</span>
@@ -163,7 +163,7 @@ export default function Projects({ theme = 'light' }) {
                     className={`p-2.5 rounded-xl transition-colors ${
                       isLight
                         ? 'bg-slate-100 hover:bg-slate-200 text-slate-800 border border-slate-200'
-                        : 'bg-white/5 hover:bg-white/10 text-slate-300 hover:text-white border border-white/10'
+                        : 'bg-[#323337] hover:bg-[#3a3b42] text-slate-300 hover:text-white border border-[#383940]'
                     }`}
                     aria-label={`View ${project.title} on GitHub`}
                     title="View GitHub Repository"

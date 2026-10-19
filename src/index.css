@@ -15,8 +15,8 @@
   }
 
   .dark body {
-    background-color: #05070c;
-    color: #e2e8f0;
+    background-color: #212126;
+    color: #ffffff;
   }
 
   /* Custom scrollbar */
@@ -35,13 +35,13 @@
   }
 
   .dark ::-webkit-scrollbar-track {
-    background: #07090e;
+    background: #212126;
   }
   .dark ::-webkit-scrollbar-thumb {
-    background: #1e293b;
+    background: #323337;
   }
   .dark ::-webkit-scrollbar-thumb:hover {
-    background: #334155;
+    background: #6dcff6;
   }
 }
 
@@ -60,7 +60,19 @@
   }
 
   .dark .text-metallic {
-    background: linear-gradient(180deg, #ffffff 0%, #d1d5db 40%, #6b7280 80%, #374151 100%);
+    background: linear-gradient(180deg, #ffffff 0%, #e2e8f0 35%, #6dcff6 70%, #323337 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .text-gradient-cyan {
+    background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .dark .text-gradient-cyan {
+    background: linear-gradient(135deg, #ffffff 10%, #6dcff6 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
@@ -79,14 +91,14 @@
   }
 
   .dark .corporate-card {
-    background: rgba(15, 21, 35, 0.55);
-    border-color: rgba(255, 255, 255, 0.07);
-    box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5);
+    background: #2a2b30;
+    border-color: #383940;
+    box-shadow: 0 12px 30px -5px rgba(0, 0, 0, 0.5);
   }
   .dark .corporate-card:hover {
-    background: rgba(20, 28, 48, 0.75);
-    border-color: rgba(56, 189, 248, 0.35);
-    box-shadow: 0 25px 50px -12px rgba(14, 165, 233, 0.15);
+    background: #323337;
+    border-color: #6dcff6;
+    box-shadow: 0 20px 40px -8px rgba(0, 0, 0, 0.6), 0 0 25px rgba(109, 207, 246, 0.15);
   }
 
   .corporate-input {
@@ -103,13 +115,13 @@
   }
 
   .dark .corporate-input {
-    background: rgba(15, 23, 42, 0.6);
-    border-color: rgba(255, 255, 255, 0.1);
-    color: #f8fafc;
+    background: #212126;
+    border-color: #383940;
+    color: #ffffff;
   }
   .dark .corporate-input:focus {
-    border-color: #38bdf8;
-    box-shadow: 0 0 15px rgba(56, 189, 248, 0.25);
+    border-color: #6dcff6;
+    box-shadow: 0 0 15px rgba(109, 207, 246, 0.25);
   }
 
   /* Soft Ambient Light Glows */
@@ -118,7 +130,7 @@
   }
 
   .dark .hero-spotlight {
-    background: radial-gradient(ellipse at 50% 40%, rgba(255, 255, 255, 0.12) 0%, rgba(56, 189, 248, 0.06) 35%, transparent 70%);
+    background: radial-gradient(ellipse at 50% 40%, rgba(109, 207, 246, 0.12) 0%, rgba(50, 51, 55, 0.4) 45%, transparent 75%);
   }
 }
 

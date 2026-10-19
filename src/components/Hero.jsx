@@ -29,7 +29,7 @@ export default function Hero({ theme = 'light' }) {
   return (
     <section
       id="home"
-      className="relative min-h-screen w-full flex flex-col justify-between pt-24 pb-12 overflow-hidden bg-white dark:bg-[#05070c] transition-colors duration-500"
+      className="relative min-h-screen w-full flex flex-col justify-between pt-24 pb-12 overflow-hidden bg-white dark:bg-[#212126] transition-colors duration-500"
     >
       {/* Background Radial Light Accent */}
       {isLight ? (
@@ -37,7 +37,7 @@ export default function Hero({ theme = 'light' }) {
       ) : (
         <>
           <div className="absolute inset-0 pointer-events-none hero-spotlight z-0 opacity-80 transition-opacity duration-500" />
-          <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[500px] bg-gradient-to-tr from-cyan-600/10 via-indigo-600/10 to-transparent blur-[140px] pointer-events-none rounded-full" />
+          <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[500px] bg-gradient-to-tr from-[#6dcff6]/10 via-[#323337]/30 to-transparent blur-[140px] pointer-events-none rounded-full" />
         </>
       )}
 
@@ -71,9 +71,9 @@ export default function Hero({ theme = 'light' }) {
                 </filter>
                 <linearGradient id="metallicGrad" x1="0%" y1="0%" x2="0%" y2="100%">
                   <stop offset="0%" stopColor="#ffffff" />
-                  <stop offset="40%" stopColor="#d1d5db" />
-                  <stop offset="80%" stopColor="#6b7280" />
-                  <stop offset="100%" stopColor="#374151" />
+                  <stop offset="35%" stopColor="#6dcff6" />
+                  <stop offset="70%" stopColor="#323337" />
+                  <stop offset="100%" stopColor="#212126" />
                 </linearGradient>
               </defs>
               <text
@@ -113,7 +113,7 @@ export default function Hero({ theme = 'light' }) {
           >
             {/* Ambient separation backlight */}
             <div className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4/5 h-4/5 rounded-full pointer-events-none transition-all duration-700 ${
-              isLight ? 'bg-white/80 blur-2xl' : 'bg-cyan-500/15 blur-3xl'
+              isLight ? 'bg-white/80 blur-2xl' : 'bg-[#6dcff6]/15 blur-3xl'
             }`} />
 
             <div className="relative group">
@@ -133,12 +133,12 @@ export default function Hero({ theme = 'light' }) {
             animate={{ opacity: 1, x: 0 }}
             whileHover={{ scale: 1.02, y: -2 }}
             transition={{ duration: 0.8, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
-            className="absolute left-2 sm:left-6 md:left-8 bottom-4 sm:bottom-8 z-20 max-w-[280px] sm:max-w-xs text-left p-3.5 sm:p-4 rounded-2xl bg-white/85 dark:bg-[#070b14]/85 backdrop-blur-md border border-slate-200/80 dark:border-white/10 shadow-sm transition-all"
+            className="absolute left-2 sm:left-6 md:left-8 bottom-4 sm:bottom-8 z-20 max-w-[280px] sm:max-w-xs text-left p-3.5 sm:p-4 rounded-2xl bg-white/85 dark:bg-[#2a2b30]/90 backdrop-blur-md border border-slate-200/80 dark:border-[#383940] shadow-sm transition-all"
           >
             <div className="flex items-center gap-2 mb-2">
               <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
               <span className={`text-[11px] sm:text-xs font-mono uppercase tracking-wider font-bold ${
-                isLight ? 'text-slate-700' : 'text-cyan-400'
+                isLight ? 'text-slate-700' : 'text-[#6dcff6]'
               }`}>
                 Available for Roles
               </span>
@@ -168,7 +168,7 @@ export default function Hero({ theme = 'light' }) {
             animate={{ opacity: 1, x: 0 }}
             whileHover={{ scale: 1.02, y: -2 }}
             transition={{ duration: 0.8, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
-            className="absolute right-2 sm:right-6 md:right-8 bottom-4 sm:bottom-8 z-20 flex items-center gap-2 sm:gap-3 p-2 rounded-full bg-white/85 dark:bg-[#070b14]/85 backdrop-blur-md border border-slate-200/80 dark:border-white/10 shadow-sm transition-all"
+            className="absolute right-2 sm:right-6 md:right-8 bottom-4 sm:bottom-8 z-20 flex items-center gap-2 sm:gap-3 p-2 rounded-full bg-white/85 dark:bg-[#2a2b30]/90 backdrop-blur-md border border-slate-200/80 dark:border-[#383940] shadow-sm transition-all"
           >
             <motion.a
               whileHover={{ scale: 1.1, rotate: -45 }}
@@ -177,7 +177,7 @@ export default function Hero({ theme = 'light' }) {
               className={`p-2.5 sm:p-3 rounded-full transition-colors shadow-xs ${
                 isLight
                   ? 'bg-slate-100 hover:bg-slate-200 text-slate-800 border border-slate-300/80'
-                  : 'bg-white/5 hover:bg-white/10 text-slate-200 border border-white/15 hover:border-cyan-400/60'
+                  : 'bg-[#323337] hover:bg-[#3a3b42] text-slate-200 border border-[#3a3b42] hover:border-[#6dcff6]'
               }`}
               aria-label="Scroll to Projects"
             >
@@ -191,7 +191,7 @@ export default function Hero({ theme = 'light' }) {
               className={`px-4 sm:px-6 py-2.5 sm:py-3 text-xs sm:text-sm font-semibold tracking-wider uppercase rounded-full transition-all shadow-sm ${
                 isLight
                   ? 'bg-slate-900 hover:bg-slate-800 text-white'
-                  : 'bg-white/5 hover:bg-white/10 text-slate-200 border border-white/20 hover:border-cyan-400/50'
+                  : 'bg-[#323337] hover:bg-[#3a3b42] text-slate-200 border border-[#3a3b42] hover:border-[#6dcff6]'
               }`}
             >
               Contact
@@ -210,9 +210,9 @@ export default function Hero({ theme = 'light' }) {
           <div className={`inline-flex items-center gap-2 px-4 py-1.5 rounded-full mb-4 shadow-sm transition-all duration-300 ${
             isLight
               ? 'bg-slate-100 border border-slate-200 text-slate-700'
-              : 'bg-slate-900/80 border border-white/10 text-slate-400'
+              : 'bg-[#2a2b30] border border-[#383940] text-slate-300'
           }`}>
-            <Sparkles className={`w-3.5 h-3.5 ${isLight ? 'text-blue-600' : 'text-cyan-400'}`} />
+            <Sparkles className={`w-3.5 h-3.5 ${isLight ? 'text-blue-600' : 'text-[#6dcff6]'}`} />
             <span className="text-xs sm:text-sm font-medium">Specializing in:</span>
             <div className="inline-block min-w-[170px] text-left">
               <AnimatePresence mode="wait">
@@ -223,7 +223,7 @@ export default function Hero({ theme = 'light' }) {
                   exit={{ opacity: 0, y: -8, filter: 'blur(3px)' }}
                   transition={{ duration: 0.3, ease: 'easeOut' }}
                   className={`text-xs sm:text-sm font-bold font-mono inline-block ${
-                    isLight ? 'text-slate-900' : 'text-cyan-300'
+                    isLight ? 'text-slate-900' : 'text-[#6dcff6]'
                   }`}
                 >
                   {portfolioData.personal.roles[currentRoleIndex]}
@@ -235,7 +235,7 @@ export default function Hero({ theme = 'light' }) {
           <p className={`text-sm sm:text-base md:text-lg font-normal leading-relaxed mb-6 transition-colors duration-300 ${
             isLight ? 'text-slate-600' : 'text-slate-300'
           }`}>
-            Computer Science and Engineering student at <strong className={isLight ? 'text-slate-900' : 'text-white'}>KIT</strong> with skills in <span className={isLight ? 'font-semibold text-slate-900' : 'text-cyan-400 font-medium'}>Java</span>, <span className={isLight ? 'font-semibold text-slate-900' : 'text-cyan-400 font-medium'}>JavaScript</span>, <span className={isLight ? 'font-semibold text-slate-900' : 'text-cyan-400 font-medium'}>Python</span>, and <span className={isLight ? 'font-semibold text-slate-900' : 'text-cyan-400 font-medium'}>React.js</span>. Dedicated to developing formal corporate-ready web solutions, robust database management systems, and intelligent automotive ADAS concepts.
+            Computer Science and Engineering student at <strong className={isLight ? 'text-slate-900' : 'text-white'}>KIT</strong> with skills in <span className={isLight ? 'font-semibold text-slate-900' : 'text-[#6dcff6] font-medium'}>Java</span>, <span className={isLight ? 'font-semibold text-slate-900' : 'text-[#6dcff6] font-medium'}>JavaScript</span>, <span className={isLight ? 'font-semibold text-slate-900' : 'text-[#6dcff6] font-medium'}>Python</span>, and <span className={isLight ? 'font-semibold text-slate-900' : 'text-[#6dcff6] font-medium'}>React.js</span>. Dedicated to developing formal corporate-ready web solutions, robust database management systems, and intelligent automotive ADAS concepts.
           </p>
 
           {/* Primary CTA Buttons with Spring Micro-Interactions */}
@@ -245,10 +245,10 @@ export default function Hero({ theme = 'light' }) {
               whileTap={{ scale: 0.96 }}
               transition={{ type: "spring", stiffness: 400, damping: 17 }}
               href="#projects"
-              className={`group inline-flex items-center gap-2 px-7 py-3.5 rounded-xl font-semibold text-xs sm:text-sm tracking-wider uppercase transition-all duration-200 shadow-md ${
+              className={`group inline-flex items-center gap-2 px-7 py-3.5 rounded-xl font-bold text-xs sm:text-sm tracking-wider uppercase transition-all duration-200 shadow-md ${
                 isLight
                   ? 'bg-slate-900 hover:bg-slate-800 text-white shadow-slate-900/20'
-                  : 'bg-gradient-to-r from-cyan-400 via-sky-400 to-blue-500 hover:from-cyan-300 hover:to-blue-400 text-black shadow-[0_0_25px_rgba(56,189,248,0.4)]'
+                  : 'bg-[#6dcff6] hover:bg-[#5bb8e3] text-[#212126] font-bold shadow-[0_0_25px_rgba(109,207,246,0.35)]'
               }`}
             >
               <span>Explore My Work</span>
@@ -265,10 +265,10 @@ export default function Hero({ theme = 'light' }) {
               className={`inline-flex items-center gap-2 px-7 py-3.5 rounded-xl font-semibold text-xs sm:text-sm tracking-wider uppercase transition-all duration-200 shadow-sm ${
                 isLight
                   ? 'bg-white hover:bg-slate-50 text-slate-800 border-2 border-slate-300 hover:border-slate-400'
-                  : 'bg-slate-900/80 hover:bg-slate-800/90 text-slate-200 hover:text-white border border-white/15 hover:border-cyan-400/60'
+                  : 'bg-[#2a2b30] hover:bg-[#323337] text-slate-200 hover:text-white border border-[#383940] hover:border-[#6dcff6]'
               }`}
             >
-              <FileDown className={`w-4 h-4 ${isLight ? 'text-slate-700' : 'text-cyan-400'}`} />
+              <FileDown className={`w-4 h-4 ${isLight ? 'text-slate-700' : 'text-[#6dcff6]'}`} />
               <span>Download Resume</span>
             </motion.a>
           </div>
@@ -285,7 +285,7 @@ export default function Hero({ theme = 'light' }) {
               target="_blank"
               rel="noopener noreferrer"
               className={`p-2.5 rounded-lg transition-colors ${
-                isLight ? 'bg-slate-100 hover:bg-slate-200 text-slate-800' : 'bg-white/5 hover:bg-white/10 hover:text-cyan-400'
+                isLight ? 'bg-slate-100 hover:bg-slate-200 text-slate-800' : 'bg-[#2a2b30] hover:bg-[#323337] text-slate-300 hover:text-[#6dcff6] border border-[#383940]'
               }`}
               aria-label="GitHub Profile"
             >
@@ -299,7 +299,7 @@ export default function Hero({ theme = 'light' }) {
               target="_blank"
               rel="noopener noreferrer"
               className={`p-2.5 rounded-lg transition-colors ${
-                isLight ? 'bg-slate-100 hover:bg-slate-200 text-slate-800' : 'bg-white/5 hover:bg-white/10 hover:text-cyan-400'
+                isLight ? 'bg-slate-100 hover:bg-slate-200 text-slate-800' : 'bg-[#2a2b30] hover:bg-[#323337] text-slate-300 hover:text-[#6dcff6] border border-[#383940]'
               }`}
               aria-label="LinkedIn Profile"
             >
@@ -311,7 +311,7 @@ export default function Hero({ theme = 'light' }) {
               transition={{ type: "spring", stiffness: 400, damping: 15 }}
               href={`mailto:${portfolioData.personal.email}`}
               className={`p-2.5 rounded-lg transition-colors ${
-                isLight ? 'bg-slate-100 hover:bg-slate-200 text-slate-800' : 'bg-white/5 hover:bg-white/10 hover:text-cyan-400'
+                isLight ? 'bg-slate-100 hover:bg-slate-200 text-slate-800' : 'bg-[#2a2b30] hover:bg-[#323337] text-slate-300 hover:text-[#6dcff6] border border-[#383940]'
               }`}
               aria-label="Email Contact"
             >
@@ -327,7 +327,7 @@ export default function Hero({ theme = 'light' }) {
           whileHover={{ y: 3 }}
           href="#about"
           className={`transition-colors duration-200 flex flex-col items-center gap-1 ${
-            isLight ? 'text-slate-400 hover:text-slate-800' : 'text-slate-500 hover:text-cyan-400'
+            isLight ? 'text-slate-400 hover:text-slate-800' : 'text-slate-400 hover:text-[#6dcff6]'
           }`}
           aria-label="Scroll down to About section"
         >

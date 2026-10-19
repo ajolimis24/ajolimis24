@@ -47,7 +47,7 @@ export default function Navbar({ theme = 'light', toggleTheme }) {
       particleCount: 80,
       spread: 70,
       origin: { y: 0.15 },
-      colors: theme === 'light' ? ['#0f172a', '#3b82f6', '#64748b'] : ['#38bdf8', '#818cf8', '#ffffff']
+      colors: theme === 'light' ? ['#0f172a', '#3b82f6', '#64748b'] : ['#6dcff6', '#323337', '#ffffff']
     });
   };
 
@@ -58,7 +58,7 @@ export default function Navbar({ theme = 'light', toggleTheme }) {
       transition={{ duration: 0.6, ease: 'easeOut' }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? 'bg-white/90 dark:bg-[#05070c]/85 backdrop-blur-md border-b border-slate-200/80 dark:border-white/10 shadow-sm dark:shadow-lg dark:shadow-black/40 py-3.5'
+          ? 'bg-white/90 dark:bg-[#212126]/90 backdrop-blur-md border-b border-slate-200/80 dark:border-[#323337] shadow-sm dark:shadow-lg dark:shadow-black/40 py-3.5'
           : 'bg-transparent py-5'
       }`}
     >
@@ -68,10 +68,10 @@ export default function Navbar({ theme = 'light', toggleTheme }) {
           href="#home"
           className="group flex items-center gap-2.5 focus:outline-none"
         >
-          <span className="text-xl sm:text-2xl font-black tracking-wider text-slate-900 dark:text-white font-display transition-colors group-hover:text-blue-600 dark:group-hover:text-cyan-400">
+          <span className="text-xl sm:text-2xl font-black tracking-wider text-slate-900 dark:text-white font-display transition-colors group-hover:text-blue-600 dark:group-hover:text-[#6dcff6]">
             {portfolioData.personal.brand}
           </span>
-          <span className="hidden sm:inline-block px-2.5 py-0.5 text-[10px] font-semibold tracking-widest uppercase bg-slate-100 text-slate-700 border border-slate-200 rounded-full dark:bg-cyan-500/10 dark:text-cyan-400 dark:border-cyan-500/20">
+          <span className="hidden sm:inline-block px-2.5 py-0.5 text-[10px] font-semibold tracking-widest uppercase bg-slate-100 text-slate-700 border border-slate-200 rounded-full dark:bg-[#323337] dark:text-[#6dcff6] dark:border-[#383940]">
             {portfolioData.personal.name}
           </span>
         </a>
@@ -94,7 +94,7 @@ export default function Navbar({ theme = 'light', toggleTheme }) {
                 {isActive && (
                   <motion.div
                     layoutId="activeIndicator"
-                    className="absolute bottom-0 left-2 right-2 h-0.5 bg-slate-900 dark:bg-gradient-to-r dark:from-cyan-400 dark:to-blue-500 rounded-full shadow-[0_0_8px_rgba(15,23,42,0.3)] dark:shadow-[0_0_8px_rgba(56,189,248,0.8)]"
+                    className="absolute bottom-0 left-2 right-2 h-0.5 bg-slate-900 dark:bg-[#6dcff6] rounded-full shadow-[0_0_8px_rgba(15,23,42,0.3)] dark:shadow-[0_0_8px_rgba(109,207,246,0.8)]"
                     transition={{ type: 'spring', stiffness: 380, damping: 30 }}
                   />
                 )}
@@ -112,7 +112,7 @@ export default function Navbar({ theme = 'light', toggleTheme }) {
             transition={{ type: "spring", stiffness: 400, damping: 15 }}
             onClick={toggleTheme}
             aria-label="Toggle light and dark theme"
-            className="p-2 rounded-full border border-slate-200 dark:border-white/15 bg-slate-50 dark:bg-white/5 text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-white/10 transition-colors shadow-xs"
+            className="p-2 rounded-full border border-slate-200 dark:border-[#383940] bg-slate-50 dark:bg-[#323337] text-slate-700 dark:text-[#6dcff6] hover:bg-slate-100 dark:hover:bg-[#3a3b42] transition-colors shadow-xs"
             title={theme === 'light' ? 'Switch to Dark Mode' : 'Switch to Clean Light Mode'}
           >
             {theme === 'light' ? (
@@ -130,9 +130,9 @@ export default function Navbar({ theme = 'light', toggleTheme }) {
             href={portfolioData.personal.resumeUrl}
             download="Ajo_Limis_Resume.pdf"
             onClick={handleResumeDownload}
-            className="flex items-center gap-2 px-4 py-2 text-xs font-semibold tracking-wider uppercase rounded-full shadow-sm bg-slate-900 text-white hover:bg-slate-800 dark:bg-white/5 dark:hover:bg-white/10 dark:text-slate-200 dark:border dark:border-white/15"
+            className="flex items-center gap-2 px-4 py-2 text-xs font-semibold tracking-wider uppercase rounded-full shadow-sm bg-slate-900 text-white hover:bg-slate-800 dark:bg-[#323337] dark:hover:bg-[#3a3b42] dark:text-white dark:border dark:border-[#383940] dark:hover:border-[#6dcff6]"
           >
-            <FileDown className="w-3.5 h-3.5 text-slate-300 dark:text-cyan-400" />
+            <FileDown className="w-3.5 h-3.5 text-slate-300 dark:text-[#6dcff6]" />
             <span>Resume</span>
           </motion.a>
         </div>
@@ -165,7 +165,7 @@ export default function Navbar({ theme = 'light', toggleTheme }) {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-            className="md:hidden bg-white/95 dark:bg-[#070a12]/95 backdrop-blur-xl border-b border-slate-200 dark:border-white/10 px-6 py-6 shadow-xl"
+            className="md:hidden bg-white/95 dark:bg-[#212126]/95 backdrop-blur-xl border-b border-slate-200 dark:border-[#323337] px-6 py-6 shadow-xl"
           >
             <nav className="flex flex-col gap-3">
               {navLinks.map((link) => {
@@ -177,7 +177,7 @@ export default function Navbar({ theme = 'light', toggleTheme }) {
                     onClick={() => setMobileMenuOpen(false)}
                     className={`py-2 text-sm font-semibold tracking-wider transition-colors ${
                       isActive
-                        ? 'text-slate-900 dark:text-cyan-400 pl-2 border-l-2 border-slate-900 dark:border-cyan-400 font-bold'
+                        ? 'text-slate-900 dark:text-[#6dcff6] pl-2 border-l-2 border-slate-900 dark:border-[#6dcff6] font-bold'
                         : 'text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white'
                     }`}
                   >
@@ -185,7 +185,7 @@ export default function Navbar({ theme = 'light', toggleTheme }) {
                   </a>
                 );
               })}
-              <div className="pt-4 border-t border-slate-200 dark:border-white/10 flex flex-col gap-2">
+              <div className="pt-4 border-t border-slate-200 dark:border-[#323337] flex flex-col gap-2">
                 <a
                   href={portfolioData.personal.resumeUrl}
                   download="Ajo_Limis_Resume.pdf"
@@ -193,9 +193,9 @@ export default function Navbar({ theme = 'light', toggleTheme }) {
                     handleResumeDownload();
                     setMobileMenuOpen(false);
                   }}
-                  className="flex items-center justify-center gap-2 py-2.5 text-xs font-semibold uppercase tracking-wider text-white bg-slate-900 hover:bg-slate-800 dark:bg-cyan-500/20 dark:hover:bg-cyan-500/30 dark:border dark:border-cyan-500/40 rounded-xl"
+                  className="flex items-center justify-center gap-2 py-2.5 text-xs font-semibold uppercase tracking-wider text-white bg-slate-900 hover:bg-slate-800 dark:bg-[#323337] dark:hover:bg-[#3a3b42] dark:border dark:border-[#6dcff6]/40 dark:text-[#6dcff6] rounded-xl"
                 >
-                  <FileDown className="w-4 h-4 text-white dark:text-cyan-400" />
+                  <FileDown className="w-4 h-4 text-white dark:text-[#6dcff6]" />
                   <span>Download Resume PDF</span>
                 </a>
               </div>

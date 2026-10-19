@@ -9,7 +9,7 @@ export default function Education({ theme = 'light' }) {
   return (
     <section 
       id="education" 
-      className="relative py-24 sm:py-32 bg-white dark:bg-[#05070c] text-slate-900 dark:text-slate-100 overflow-hidden transition-colors duration-300"
+      className="relative py-24 sm:py-32 bg-white dark:bg-[#212126] text-slate-900 dark:text-slate-100 overflow-hidden transition-colors duration-300"
     >
       <div className="max-w-7xl mx-auto px-6 sm:px-8 relative z-10">
         
@@ -21,7 +21,7 @@ export default function Education({ theme = 'light' }) {
           transition={{ duration: 0.7 }}
           className="text-center max-w-3xl mx-auto mb-16 sm:mb-20"
         >
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-100 dark:bg-cyan-500/10 border border-slate-200 dark:border-cyan-500/20 text-slate-800 dark:text-cyan-400 text-xs font-mono uppercase tracking-widest mb-4 font-semibold">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-100 dark:bg-[#323337] border border-slate-200 dark:border-[#383940] text-slate-800 dark:text-[#6dcff6] text-xs font-mono uppercase tracking-widest mb-4 font-semibold">
             <GraduationCap className="w-3.5 h-3.5" />
             <span>Academic Milestones</span>
           </div>
@@ -40,7 +40,7 @@ export default function Education({ theme = 'light' }) {
           <div className={`absolute top-0 bottom-0 left-4 sm:left-1/2 -translate-x-1/2 w-0.5 ${
             isLight
               ? 'bg-slate-200'
-              : 'bg-gradient-to-b from-cyan-500/50 via-indigo-500/30 to-purple-500/10'
+              : 'bg-gradient-to-b from-[#6dcff6]/60 via-[#323337] to-transparent'
           }`} />
 
           {/* Item 1: Degree (B.E. Computer Science and Engineering) */}
@@ -55,7 +55,7 @@ export default function Education({ theme = 'light' }) {
             <div className={`absolute left-4 sm:left-1/2 -translate-x-1/2 w-9 h-9 rounded-full flex items-center justify-center z-10 ${
               isLight
                 ? 'bg-white border-2 border-slate-900 text-slate-900 shadow-md'
-                : 'bg-[#0b0f19] border-2 border-cyan-400 text-cyan-400 shadow-[0_0_15px_rgba(56,189,248,0.6)]'
+                : 'bg-[#212126] border-2 border-[#6dcff6] text-[#6dcff6] shadow-[0_0_15px_rgba(109,207,246,0.5)]'
             }`}>
               <GraduationCap className="w-4 h-4" />
             </div>
@@ -65,12 +65,12 @@ export default function Education({ theme = 'light' }) {
               <div className="corporate-card rounded-2xl p-6 text-left">
                 <div className="flex flex-wrap items-center justify-between gap-2 mb-2">
                   <span className={`px-2.5 py-0.5 text-[10px] font-mono font-bold uppercase tracking-wider rounded-full ${
-                    isLight ? 'bg-slate-100 text-slate-800 border border-slate-200' : 'text-cyan-400 bg-cyan-500/10 border border-cyan-500/20'
+                    isLight ? 'bg-slate-100 text-slate-800 border border-slate-200' : 'text-[#6dcff6] bg-[#323337] border border-[#383940]'
                   }`}>
                     {portfolioData.education[0].status}
                   </span>
                   <span className={`text-xs font-mono font-bold px-2.5 py-0.5 rounded-md border ${
-                    isLight ? 'bg-slate-900 text-white border-slate-900' : 'text-cyan-300 bg-white/5 border-white/5'
+                    isLight ? 'bg-slate-900 text-white border-slate-900' : 'text-white bg-[#323337] border-[#383940]'
                   }`}>
                     {portfolioData.education[0].metrics}
                   </span>
@@ -79,7 +79,7 @@ export default function Education({ theme = 'light' }) {
                 <h3 className="text-lg sm:text-xl font-bold text-slate-950 dark:text-white font-display">
                   {portfolioData.education[0].degree}
                 </h3>
-                <p className={`text-sm font-semibold mt-0.5 ${isLight ? 'text-slate-700' : 'text-cyan-400'}`}>
+                <p className={`text-sm font-semibold mt-0.5 ${isLight ? 'text-slate-700' : 'text-[#6dcff6]'}`}>
                   {portfolioData.education[0].field}
                 </p>
                 <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 font-medium mt-1">
@@ -97,11 +97,11 @@ export default function Education({ theme = 'light' }) {
                   </span>
                 </div>
 
-                <div className="space-y-2 pt-3 border-t border-slate-200 dark:border-white/10">
+                <div className="space-y-2 pt-3 border-t border-slate-200 dark:border-[#383940]">
                   {portfolioData.education[0].details.map((detail, dIdx) => (
                     <div key={dIdx} className="flex items-start gap-2 text-xs text-slate-700 dark:text-slate-300">
                       <CheckCircle className={`w-3.5 h-3.5 shrink-0 mt-0.5 ${
-                        isLight ? 'text-slate-900' : 'text-cyan-400'
+                        isLight ? 'text-slate-900' : 'text-[#6dcff6]'
                       }`} />
                       <span>{detail}</span>
                     </div>
@@ -113,7 +113,7 @@ export default function Education({ theme = 'light' }) {
             {/* Right Column (Timeline note on right) */}
             <div className="hidden sm:block pl-8">
               <div className={`p-4 rounded-xl max-w-xs border ${
-                isLight ? 'bg-slate-50 border-slate-200/80 text-slate-700' : 'bg-white/[0.02] border-white/5 text-slate-300'
+                isLight ? 'bg-slate-50 border-slate-200/80 text-slate-700' : 'bg-[#2a2b30] border-[#383940] text-slate-300'
               }`}>
                 <p className="text-xs font-mono uppercase tracking-wider font-bold text-slate-500 dark:text-slate-400">Institution</p>
                 <p className="text-sm font-semibold text-slate-900 dark:text-slate-200 mt-1">KIT – Kalaignar Karunanidhi Institute of Technology</p>
@@ -134,7 +134,7 @@ export default function Education({ theme = 'light' }) {
             <div className={`absolute left-4 sm:left-1/2 -translate-x-1/2 w-9 h-9 rounded-full flex items-center justify-center z-10 ${
               isLight
                 ? 'bg-white border-2 border-slate-900 text-slate-900 shadow-md'
-                : 'bg-[#0b0f19] border-2 border-purple-400 text-purple-400 shadow-[0_0_15px_rgba(168,85,247,0.6)]'
+                : 'bg-[#212126] border-2 border-[#6dcff6] text-[#6dcff6] shadow-[0_0_15px_rgba(109,207,246,0.5)]'
             }`}>
               <Award className="w-4 h-4" />
             </div>
@@ -142,9 +142,9 @@ export default function Education({ theme = 'light' }) {
             {/* Left Column (Badge indicator on desktop) */}
             <div className="hidden sm:block text-right pr-8">
               <div className={`inline-block p-4 rounded-xl text-right max-w-xs border ${
-                isLight ? 'bg-slate-50 border-slate-200/80 text-slate-700' : 'bg-white/[0.02] border-white/5 text-slate-300'
+                isLight ? 'bg-slate-50 border-slate-200/80 text-slate-700' : 'bg-[#2a2b30] border-[#383940] text-slate-300'
               }`}>
-                <p className="text-xs font-mono uppercase tracking-wider font-bold text-slate-500 dark:text-purple-400">Coursework Completed</p>
+                <p className="text-xs font-mono uppercase tracking-wider font-bold text-slate-500 dark:text-[#6dcff6]">Coursework Completed</p>
                 <p className="text-sm font-semibold text-slate-900 dark:text-slate-200 mt-1">Object-Oriented Programming</p>
                 <p className="text-xs text-slate-600 dark:text-slate-400 mt-1">Data abstraction, inheritance, polymorphism, and problem-solving application development.</p>
               </div>
@@ -155,7 +155,7 @@ export default function Education({ theme = 'light' }) {
               <div className="corporate-card rounded-2xl p-6 text-left">
                 <div className="flex items-center justify-between mb-2">
                   <span className={`px-2.5 py-0.5 text-[10px] font-mono font-bold uppercase tracking-wider rounded-full ${
-                    isLight ? 'bg-slate-100 text-slate-800 border border-slate-200' : 'text-purple-300 bg-purple-500/10 border border-purple-500/20'
+                    isLight ? 'bg-slate-100 text-slate-800 border border-slate-200' : 'text-[#6dcff6] bg-[#323337] border border-[#383940]'
                   }`}>
                     {portfolioData.certifications[0].badge}
                   </span>
@@ -171,7 +171,7 @@ export default function Education({ theme = 'light' }) {
                   Issued by: {portfolioData.certifications[0].issuer}
                 </p>
 
-                <p className="text-xs sm:text-sm text-slate-700 dark:text-slate-300 leading-relaxed mt-4 pt-3 border-t border-slate-200 dark:border-white/10">
+                <p className="text-xs sm:text-sm text-slate-700 dark:text-slate-300 leading-relaxed mt-4 pt-3 border-t border-slate-200 dark:border-[#383940]">
                   {portfolioData.certifications[0].description}
                 </p>
               </div>

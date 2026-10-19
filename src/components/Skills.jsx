@@ -69,7 +69,7 @@ export default function Skills({ theme = 'light' }) {
   return (
     <section 
       id="skills" 
-      className="relative py-24 sm:py-32 bg-white dark:bg-[#05070c] text-slate-900 dark:text-slate-100 overflow-hidden transition-colors duration-300"
+      className="relative py-24 sm:py-32 bg-white dark:bg-[#212126] text-slate-900 dark:text-slate-100 overflow-hidden transition-colors duration-300"
     >
       <div className="max-w-7xl mx-auto px-6 sm:px-8 relative z-10">
         
@@ -81,7 +81,7 @@ export default function Skills({ theme = 'light' }) {
           transition={{ duration: 0.7 }}
           className="text-center max-w-3xl mx-auto mb-12 sm:mb-16"
         >
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-100 dark:bg-cyan-500/10 border border-slate-200 dark:border-cyan-500/20 text-slate-800 dark:text-cyan-400 text-xs font-mono uppercase tracking-widest mb-4 font-semibold">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-100 dark:bg-[#323337] border border-slate-200 dark:border-[#383940] text-slate-800 dark:text-[#6dcff6] text-xs font-mono uppercase tracking-widest mb-4 font-semibold">
             <Wrench className="w-3.5 h-3.5" />
             <span>Technical Capabilities</span>
           </div>
@@ -104,10 +104,10 @@ export default function Skills({ theme = 'light' }) {
                     isSelected
                       ? isLight
                         ? 'bg-slate-900 text-white shadow-sm scale-105'
-                        : 'bg-gradient-to-r from-cyan-500 to-blue-600 text-black shadow-[0_0_15px_rgba(56,189,248,0.35)] scale-105'
+                        : 'bg-[#6dcff6] text-[#212126] font-bold shadow-[0_0_15px_rgba(109,207,246,0.35)] scale-105'
                       : isLight
                         ? 'bg-slate-100 text-slate-700 hover:bg-slate-200 hover:text-slate-900 border border-slate-200'
-                        : 'bg-white/5 text-slate-400 hover:text-white hover:bg-white/10 border border-white/5'
+                        : 'bg-[#2a2b30] text-slate-300 hover:text-white hover:bg-[#323337] border border-[#383940]'
                   }`}
                 >
                   {tab.label}
@@ -142,7 +142,7 @@ export default function Skills({ theme = 'light' }) {
                     <span className={`text-[10px] font-mono uppercase tracking-wider font-semibold px-2.5 py-0.5 rounded-full ${
                       isLight
                         ? 'bg-slate-100 text-slate-700 border border-slate-200'
-                        : 'bg-cyan-500/10 text-cyan-400/80 border border-cyan-500/20'
+                        : 'bg-[#323337] text-[#6dcff6] border border-[#383940]'
                     }`}>
                       {category.items.length} Skills
                     </span>
@@ -161,12 +161,12 @@ export default function Skills({ theme = 'light' }) {
                           className={`flex items-center justify-between p-3 rounded-xl transition-all duration-200 ${
                             isLight
                               ? 'bg-slate-50 hover:bg-slate-100 border border-slate-200/80'
-                              : 'bg-white/[0.03] hover:bg-white/[0.07] border border-white/5 hover:border-cyan-500/20'
+                              : 'bg-[#212126] hover:bg-[#323337] border border-[#383940] hover:border-[#6dcff6]/40'
                           }`}
                         >
                           <div className="flex items-center gap-3">
                             <div className={`p-2 rounded-lg ${
-                              isLight ? 'bg-white text-slate-800 border border-slate-200' : 'bg-cyan-500/10 text-cyan-400'
+                              isLight ? 'bg-white text-slate-800 border border-slate-200' : 'bg-[#323337] text-[#6dcff6]'
                             }`}>
                               <IconComponent className="w-4 h-4" />
                             </div>
@@ -181,7 +181,7 @@ export default function Skills({ theme = 'light' }) {
                           </div>
 
                           <span className={`text-[10px] font-mono px-2 py-0.5 rounded-md shrink-0 ${
-                            isLight ? 'bg-white text-slate-600 border border-slate-200' : 'text-slate-400 bg-white/5'
+                            isLight ? 'bg-white text-slate-600 border border-slate-200' : 'text-slate-300 bg-[#323337] border border-[#383940]'
                           }`}>
                             {skill.level}
                           </span>

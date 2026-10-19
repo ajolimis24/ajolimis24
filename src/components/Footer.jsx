@@ -20,14 +20,14 @@ export default function Footer({ theme = 'light' }) {
   ];
 
   return (
-    <footer className="relative bg-white dark:bg-[#040508] border-t border-slate-200 dark:border-white/10 text-slate-600 dark:text-slate-400 py-12 overflow-hidden transition-colors duration-300">
+    <footer className="relative bg-white dark:bg-[#1a1b1f] border-t border-slate-200 dark:border-[#323337] text-slate-600 dark:text-slate-400 py-12 overflow-hidden transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-6 sm:px-8">
         
-        <div className="flex flex-col md:flex-row items-center justify-between gap-8 pb-10 border-b border-slate-200 dark:border-white/5">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-8 pb-10 border-b border-slate-200 dark:border-[#323337]">
           {/* Brand */}
           <div className="text-center md:text-left">
             <a href="#home" className="inline-block focus:outline-none">
-              <span className="text-2xl font-black tracking-wider text-slate-900 dark:text-white font-display hover:text-blue-600 dark:hover:text-cyan-400 transition-colors">
+              <span className="text-2xl font-black tracking-wider text-slate-900 dark:text-white font-display hover:text-blue-600 dark:hover:text-[#6dcff6] transition-colors">
                 {portfolioData.personal.brand}
               </span>
             </a>
@@ -42,7 +42,7 @@ export default function Footer({ theme = 'light' }) {
               <a
                 key={link.name}
                 href={link.href}
-                className="text-slate-600 hover:text-slate-950 dark:text-slate-400 dark:hover:text-cyan-400 transition-colors"
+                className="text-slate-600 hover:text-slate-950 dark:text-slate-400 dark:hover:text-[#6dcff6] transition-colors"
               >
                 {link.name}
               </a>
@@ -50,7 +50,7 @@ export default function Footer({ theme = 'light' }) {
             <a
               href={portfolioData.personal.resumeUrl}
               download="Ajo_Limis_Resume.pdf"
-              className="text-slate-900 dark:text-cyan-400 hover:underline transition-colors flex items-center gap-1 font-bold"
+              className="text-slate-900 dark:text-[#6dcff6] hover:underline transition-colors flex items-center gap-1 font-bold"
             >
               <FileDown className="w-3.5 h-3.5" />
               <span>Resume PDF</span>
@@ -64,7 +64,7 @@ export default function Footer({ theme = 'light' }) {
               target="_blank"
               rel="noopener noreferrer"
               className={`p-2.5 rounded-xl transition-colors ${
-                isLight ? 'bg-slate-100 hover:bg-slate-200 text-slate-800' : 'bg-white/5 hover:bg-white/10 text-slate-400 hover:text-white'
+                isLight ? 'bg-slate-100 hover:bg-slate-200 text-slate-800' : 'bg-[#2a2b30] hover:bg-[#323337] text-slate-300 hover:text-[#6dcff6] border border-[#383940]'
               }`}
               aria-label="GitHub"
             >
@@ -75,7 +75,7 @@ export default function Footer({ theme = 'light' }) {
               target="_blank"
               rel="noopener noreferrer"
               className={`p-2.5 rounded-xl transition-colors ${
-                isLight ? 'bg-slate-100 hover:bg-slate-200 text-slate-800' : 'bg-white/5 hover:bg-white/10 text-slate-400 hover:text-white'
+                isLight ? 'bg-slate-100 hover:bg-slate-200 text-slate-800' : 'bg-[#2a2b30] hover:bg-[#323337] text-slate-300 hover:text-[#6dcff6] border border-[#383940]'
               }`}
               aria-label="LinkedIn"
             >
@@ -84,7 +84,7 @@ export default function Footer({ theme = 'light' }) {
             <a
               href={`mailto:${portfolioData.personal.email}`}
               className={`p-2.5 rounded-xl transition-colors ${
-                isLight ? 'bg-slate-100 hover:bg-slate-200 text-slate-800' : 'bg-white/5 hover:bg-white/10 text-slate-400 hover:text-white'
+                isLight ? 'bg-slate-100 hover:bg-slate-200 text-slate-800' : 'bg-[#2a2b30] hover:bg-[#323337] text-slate-300 hover:text-[#6dcff6] border border-[#383940]'
               }`}
               aria-label="Email"
             >
@@ -95,7 +95,7 @@ export default function Footer({ theme = 'light' }) {
               className={`p-2.5 rounded-xl transition-colors ml-2 ${
                 isLight
                   ? 'bg-slate-900 text-white hover:bg-slate-800 shadow-sm'
-                  : 'bg-cyan-500/10 hover:bg-cyan-500/20 text-cyan-400 border border-cyan-500/20'
+                  : 'bg-[#323337] hover:bg-[#3a3b42] text-[#6dcff6] border border-[#383940]'
               }`}
               aria-label="Scroll back to top"
               title="Back to Top"

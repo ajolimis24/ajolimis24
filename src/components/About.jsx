@@ -16,7 +16,7 @@ export default function About({ theme = 'light' }) {
   return (
     <section 
       id="about" 
-      className="relative py-24 sm:py-32 bg-slate-50/60 dark:bg-[#060810] border-y border-slate-200/80 dark:border-white/5 text-slate-900 dark:text-slate-100 overflow-hidden transition-colors duration-300"
+      className="relative py-24 sm:py-32 bg-slate-50/60 dark:bg-[#1d1d22] border-y border-slate-200/80 dark:border-[#323337] text-slate-900 dark:text-slate-100 overflow-hidden transition-colors duration-300"
     >
       <div className="max-w-7xl mx-auto px-6 sm:px-8 relative z-10">
         
@@ -28,7 +28,7 @@ export default function About({ theme = 'light' }) {
           transition={{ duration: 0.7 }}
           className="text-center max-w-3xl mx-auto mb-16 sm:mb-20"
         >
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-100 dark:bg-cyan-500/10 border border-slate-200 dark:border-cyan-500/20 text-slate-800 dark:text-cyan-400 text-xs font-mono uppercase tracking-widest mb-4 font-semibold">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-100 dark:bg-[#323337] border border-slate-200 dark:border-[#383940] text-slate-800 dark:text-[#6dcff6] text-xs font-mono uppercase tracking-widest mb-4 font-semibold">
             <User className="w-3.5 h-3.5" />
             <span>Profile Overview</span>
           </div>
@@ -53,7 +53,7 @@ export default function About({ theme = 'light' }) {
           >
             <div className="corporate-card rounded-2xl p-6 sm:p-8">
               <h3 className="text-xl sm:text-2xl font-bold text-slate-950 dark:text-white mb-4 flex items-center gap-2.5 font-display">
-                <GraduationCap className={`w-6 h-6 ${isLight ? 'text-slate-900' : 'text-cyan-400'}`} />
+                <GraduationCap className={`w-6 h-6 ${isLight ? 'text-slate-900' : 'text-[#6dcff6]'}`} />
                 <span>Academic & Engineering Background</span>
               </h3>
               
@@ -64,20 +64,20 @@ export default function About({ theme = 'light' }) {
               </div>
 
               {/* Problem Solving & Philosophy */}
-              <div className="mt-8 pt-6 border-t border-slate-200 dark:border-white/10">
-                <h4 className="text-xs font-semibold uppercase tracking-wider text-slate-900 dark:text-cyan-400 font-mono mb-3">
+              <div className="mt-8 pt-6 border-t border-slate-200 dark:border-[#383940]">
+                <h4 className="text-xs font-semibold uppercase tracking-wider text-slate-900 dark:text-[#6dcff6] font-mono mb-3">
                   Problem-Solving Approach
                 </h4>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                  <div className="flex items-start gap-2.5 p-3.5 rounded-xl bg-slate-50 dark:bg-white/[0.03] border border-slate-200/80 dark:border-white/5">
-                    <CheckCircle2 className={`w-4 h-4 shrink-0 mt-0.5 ${isLight ? 'text-slate-800' : 'text-cyan-400'}`} />
+                  <div className="flex items-start gap-2.5 p-3.5 rounded-xl bg-slate-50 dark:bg-[#212126] border border-slate-200/80 dark:border-[#383940]">
+                    <CheckCircle2 className={`w-4 h-4 shrink-0 mt-0.5 ${isLight ? 'text-slate-800' : 'text-[#6dcff6]'}`} />
                     <div>
                       <p className="text-xs font-bold text-slate-900 dark:text-slate-200">Analytical Decomposition</p>
                       <p className="text-[11px] text-slate-600 dark:text-slate-400 mt-0.5">Deconstructing complex requirements into structured, testable modules.</p>
                     </div>
                   </div>
-                  <div className="flex items-start gap-2.5 p-3.5 rounded-xl bg-slate-50 dark:bg-white/[0.03] border border-slate-200/80 dark:border-white/5">
-                    <CheckCircle2 className={`w-4 h-4 shrink-0 mt-0.5 ${isLight ? 'text-slate-800' : 'text-cyan-400'}`} />
+                  <div className="flex items-start gap-2.5 p-3.5 rounded-xl bg-slate-50 dark:bg-[#212126] border border-slate-200/80 dark:border-[#383940]">
+                    <CheckCircle2 className={`w-4 h-4 shrink-0 mt-0.5 ${isLight ? 'text-slate-800' : 'text-[#6dcff6]'}`} />
                     <div>
                       <p className="text-xs font-bold text-slate-900 dark:text-slate-200">User-Centric Architecture</p>
                       <p className="text-[11px] text-slate-600 dark:text-slate-400 mt-0.5">Ensuring every interaction and data endpoint is intuitive and accessible.</p>
@@ -91,7 +91,7 @@ export default function About({ theme = 'light' }) {
             <div className="flex flex-wrap items-center gap-4 pt-1">
               <a
                 href="#skills"
-                className="inline-flex items-center gap-2 text-xs font-bold tracking-wider uppercase text-slate-900 dark:text-cyan-400 hover:underline transition-colors"
+                className="inline-flex items-center gap-2 text-xs font-bold tracking-wider uppercase text-slate-900 dark:text-[#6dcff6] hover:underline transition-colors"
               >
                 <span>View Technical Skills</span>
                 <ArrowRight className="w-3.5 h-3.5" />
@@ -145,7 +145,7 @@ export default function About({ theme = 'light' }) {
                   <div className={`p-2.5 rounded-lg shrink-0 ${
                     isLight 
                       ? 'bg-slate-100 text-slate-900 border border-slate-200' 
-                      : 'bg-cyan-500/10 border border-cyan-500/20 text-cyan-400'
+                      : 'bg-[#323337] border border-[#383940] text-[#6dcff6]'
                   }`}>
                     {index === 0 && <Code2 className="w-4 h-4" />}
                     {index === 1 && <Cpu className="w-4 h-4" />}

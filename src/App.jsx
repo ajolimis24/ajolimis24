@@ -46,7 +46,7 @@ export default function App() {
   };
 
   return (
-    <div className="relative min-h-screen bg-white text-slate-900 selection:bg-slate-900 selection:text-white dark:bg-[#05070c] dark:text-slate-100 dark:selection:bg-cyan-500/25 dark:selection:text-cyan-200 transition-colors duration-300">
+    <div className="relative min-h-screen bg-white text-slate-900 selection:bg-slate-900 selection:text-white dark:bg-[#212126] dark:text-[#ffffff] dark:selection:bg-[#6dcff6]/30 dark:selection:text-[#6dcff6] transition-colors duration-500">
       {/* Background Particles (Subtle in light, ambient in dark) */}
       <ParticlesBackground theme={theme} />
 
@@ -74,7 +74,7 @@ export default function App() {
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.5, y: 20 }}
             onClick={scrollToTop}
-            className="fixed bottom-6 right-6 z-40 p-3 rounded-full bg-slate-900 hover:bg-slate-800 text-white border border-slate-700 shadow-xl transition-all hover:scale-110 active:scale-95 dark:bg-cyan-500/20 dark:hover:bg-cyan-500/30 dark:text-cyan-400 dark:border-cyan-500/40"
+            className="fixed bottom-6 right-6 z-40 p-3 rounded-full bg-slate-900 hover:bg-slate-800 text-white border border-slate-700 shadow-xl transition-all hover:scale-110 active:scale-95 dark:bg-[#323337] dark:hover:bg-[#6dcff6] dark:text-[#6dcff6] dark:hover:text-[#212126] dark:border-[#3a3b42] dark:shadow-[0_0_20px_rgba(109,207,246,0.3)]"
             aria-label="Scroll back to top"
             title="Scroll to top"
           >

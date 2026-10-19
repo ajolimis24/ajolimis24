@@ -8,18 +8,24 @@ export default {
   theme: {
     extend: {
       colors: {
+        theme: {
+          bg: '#212126',
+          card: '#323337',
+          surface: '#2a2b30',
+          border: '#3a3b42',
+          cyan: '#6dcff6',
+          white: '#ffffff',
+        },
         dark: {
-          bg: '#05070c',
-          surface: '#0b0f19',
-          card: '#111625',
-          border: 'rgba(255, 255, 255, 0.08)',
-          hover: 'rgba(255, 255, 255, 0.04)',
+          bg: '#212126',
+          surface: '#2a2b30',
+          card: '#323337',
+          border: '#3a3b42',
+          hover: 'rgba(255, 255, 255, 0.05)',
         },
         accent: {
-          blue: '#3b82f6',
-          cyan: '#06b6d4',
-          violet: '#8b5cf6',
-          purple: '#a855f7',
+          cyan: '#6dcff6',
+          blue: '#5bb8e3',
         }
       },
       fontFamily: {
