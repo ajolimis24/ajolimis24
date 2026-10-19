@@ -130,8 +130,9 @@ export default function Skills({ theme = 'light' }) {
                 initial={{ opacity: 0, scale: 0.95, y: 20 }}
                 animate={{ opacity: 1, scale: 1, y: 0 }}
                 exit={{ opacity: 0, scale: 0.95, y: 20 }}
-                transition={{ duration: 0.4 }}
-                className="corporate-card rounded-2xl p-6 sm:p-7 flex flex-col justify-between group"
+                whileHover={{ y: -6, scale: 1.015 }}
+                transition={{ duration: 0.35, ease: 'easeOut' }}
+                className="corporate-card rounded-2xl p-6 sm:p-7 flex flex-col justify-between group shadow-sm hover:shadow-xl transition-shadow"
               >
                 <div>
                   <div className="flex items-center justify-between mb-4">

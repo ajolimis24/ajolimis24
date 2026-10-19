@@ -106,10 +106,13 @@ export default function Navbar({ theme = 'light', toggleTheme }) {
         {/* Header Actions (Theme Toggle & Resume) */}
         <div className="hidden sm:flex items-center gap-3">
           {/* Theme Toggle Button */}
-          <button
+          <motion.button
+            whileHover={{ scale: 1.15, rotate: 15 }}
+            whileTap={{ scale: 0.88, rotate: -25 }}
+            transition={{ type: "spring", stiffness: 400, damping: 15 }}
             onClick={toggleTheme}
             aria-label="Toggle light and dark theme"
-            className="p-2 rounded-full border border-slate-200 dark:border-white/15 bg-slate-50 dark:bg-white/5 text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-white/10 transition-colors"
+            className="p-2 rounded-full border border-slate-200 dark:border-white/15 bg-slate-50 dark:bg-white/5 text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-white/10 transition-colors shadow-xs"
             title={theme === 'light' ? 'Switch to Dark Mode' : 'Switch to Clean Light Mode'}
           >
             {theme === 'light' ? (
@@ -117,18 +120,21 @@ export default function Navbar({ theme = 'light', toggleTheme }) {
             ) : (
               <Sun className="w-4 h-4 text-amber-300" />
             )}
-          </button>
+          </motion.button>
 
           {/* Resume Download CTA */}
-          <a
+          <motion.a
+            whileHover={{ scale: 1.05, y: -1 }}
+            whileTap={{ scale: 0.95 }}
+            transition={{ type: "spring", stiffness: 400, damping: 17 }}
             href={portfolioData.personal.resumeUrl}
             download="Ajo_Limis_Resume.pdf"
             onClick={handleResumeDownload}
-            className="flex items-center gap-2 px-4 py-2 text-xs font-semibold tracking-wider uppercase rounded-full transition-all duration-200 shadow-sm bg-slate-900 text-white hover:bg-slate-800 dark:bg-white/5 dark:hover:bg-white/10 dark:text-slate-200 dark:border dark:border-white/15"
+            className="flex items-center gap-2 px-4 py-2 text-xs font-semibold tracking-wider uppercase rounded-full shadow-sm bg-slate-900 text-white hover:bg-slate-800 dark:bg-white/5 dark:hover:bg-white/10 dark:text-slate-200 dark:border dark:border-white/15"
           >
             <FileDown className="w-3.5 h-3.5 text-slate-300 dark:text-cyan-400" />
             <span>Resume</span>
-          </a>
+          </motion.a>
         </div>
 
         {/* Mobile Menu & Theme Toggle on mobile */}

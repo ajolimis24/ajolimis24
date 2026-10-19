@@ -44,11 +44,12 @@ export default function Projects({ theme = 'light' }) {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-80px" }}
-              transition={{ duration: 0.6, delay: index * 0.15 }}
+              whileHover={{ y: -8, scale: 1.01 }}
+              transition={{ duration: 0.4, delay: index * 0.15, ease: 'easeOut' }}
               className={`rounded-2xl overflow-hidden flex flex-col justify-between transition-all duration-300 ${
                 isLight
-                  ? 'bg-white border border-slate-200/90 shadow-sm hover:shadow-xl hover:border-slate-300'
-                  : 'glass-card border border-white/10 hover:border-cyan-500/40 shadow-xl'
+                  ? 'bg-white border border-slate-200/90 shadow-sm hover:shadow-2xl hover:border-slate-300'
+                  : 'glass-card border border-white/10 hover:border-cyan-500/40 shadow-xl hover:shadow-[0_20px_45px_rgba(14,165,233,0.2)]'
               }`}
             >
               {/* Image Preview Container */}
@@ -139,9 +140,11 @@ export default function Projects({ theme = 'light' }) {
 
                 {/* Card Action Buttons */}
                 <div className="pt-5 border-t border-slate-200 dark:border-white/10 flex items-center justify-between gap-4">
-                  <button
+                  <motion.button
+                    whileHover={{ scale: 1.04, x: 2 }}
+                    whileTap={{ scale: 0.96 }}
                     onClick={() => setSelectedProject(project)}
-                    className={`inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider transition-all duration-200 group/btn shadow-xs ${
+                    className={`inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider transition-colors duration-200 group/btn shadow-xs ${
                       isLight
                         ? 'bg-slate-900 hover:bg-slate-800 text-white'
                         : 'text-cyan-400 hover:text-cyan-300'
@@ -149,13 +152,15 @@ export default function Projects({ theme = 'light' }) {
                   >
                     <span>View Architecture & Details</span>
                     <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover/btn:translate-x-1" />
-                  </button>
+                  </motion.button>
 
-                  <a
+                  <motion.a
+                    whileHover={{ scale: 1.15, rotate: 5 }}
+                    whileTap={{ scale: 0.9 }}
                     href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`p-2.5 rounded-xl transition-all ${
+                    className={`p-2.5 rounded-xl transition-colors ${
                       isLight
                         ? 'bg-slate-100 hover:bg-slate-200 text-slate-800 border border-slate-200'
                         : 'bg-white/5 hover:bg-white/10 text-slate-300 hover:text-white border border-white/10'
@@ -164,7 +169,7 @@ export default function Projects({ theme = 'light' }) {
                     title="View GitHub Repository"
                   >
                     <GithubIcon className="w-4 h-4" />
-                  </a>
+                  </motion.a>
                 </div>
               </div>
             </motion.div>
